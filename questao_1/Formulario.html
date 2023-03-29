@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Comissão de Vendedores</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Comissão de Vendedores</h1>
+    <form
+      class="form-register"
+      action="http://localhost:3001/salvar"
+      method="POST"
+    >
+      <fieldset>
+        <legend>Participantes</legend>
+        <div id="repeater">
+          <div>
+            <label>E-mail:</label>
+            <input
+              type="text"
+              name="email[]"
+              placeholder="Digite o e-mail do participante"
+            />
+            <label>Percentual</label>
+            <input
+              type="text"
+              name="comissao[]"
+              placeholder="Comissão do participante"
+            />
+            <button type="button" class="remove">Remover</button>
+          </div>
+        </div>
+          <button type="button" id="add">+ Adicionar Participante</button>
+          <button type="submit">Salvar</button>
+      </fieldset>
+    </form>
+    <script src="app.js"></script>
+    <script src="/endpoint/endpoint.js"></script>
+  </body>
+</html>
